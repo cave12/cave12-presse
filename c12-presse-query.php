@@ -6,7 +6,7 @@
 
 function c12_presse_order( $query ) {
 
-        if ( $query->is_archive() && !is_admin() ) {
+        if ( $query->is_post_type_archive( 'presse' ) && !is_admin() ) {
         
            	$query->set( 'orderby', 'menu_order' );
            	$query->set( 'order', 'ASC' );
