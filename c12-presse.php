@@ -40,7 +40,7 @@ function c12_register_presse_post_type() {
 			 'menu_position'	   => 20,
 			 'menu_icon' => 'dashicons-media-spreadsheet',
 			 'map_meta_cap'		=> true,
-			 'hierarchical'		=> false,
+			 'hierarchical'		=> true,
 			 'has_archive'		=> true,
 			 'supports'			=> array(
 				 'title',
@@ -59,6 +59,8 @@ function c12_register_presse_post_type() {
 	
 }
 
+// Query Parameters
+include_once (plugin_dir_path(__FILE__).'c12-presse-query.php');
 
 // Champs ACF
 include_once (plugin_dir_path(__FILE__).'c12-presse-acf.php');
